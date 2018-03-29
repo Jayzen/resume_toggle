@@ -1,0 +1,20 @@
+<div id="resume" class="collapse">
+  <div class="card card-body bg-success text-white py-5">
+    <h2>教育经历</h2>
+    <p>毕业于浙江大学，获浙江大学优秀研究生称号 </p>
+  </div>
+  <% @educations.each do |ed| %> 
+  <div class="card mt-1">
+    <div class="card-header text-secondary d-flex flex-row justify-content-between">
+      <div class="font-weight-bold"><%= ed.school %></div>
+      <div><small><%= ed.degree %></small></div>
+    </div>
+    <div class="card-body text-secondary d-font">
+      <div>
+        <div class="card-text"><%= raw ed.content %></div>
+      </div>
+    </div> 
+  </div>
+  <% end %>
+
+</div>

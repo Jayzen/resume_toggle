@@ -1,0 +1,32 @@
+<%= form_with(model: work, local: true) do |form| %>
+  <% if work.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(work.errors.count, "error") %> prohibited this work from being saved:</h2>
+
+      <ul>
+      <% work.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :company %>
+    <%= form.text_field :company, id: :work_company %>
+  </div>
+
+  <div class="field">
+    <%= form.label :content %>
+    <%= form.text_field :content, id: :work_content %>
+  </div>
+
+  <div class="field">
+    <%= form.label :technology %>
+    <%= form.text_field :technology, id: :work_technology %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

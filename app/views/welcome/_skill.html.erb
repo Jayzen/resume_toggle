@@ -1,0 +1,19 @@
+<div id="home" class="collapse">
+  <div class="card card-body bg-primary text-white py-5">
+    <h2>技术背景</h2>
+    <p>擅长Ruby开发和Rails Web开发</p>
+  </div>
+
+  <% @skills.each do |skill| %>
+  <div class="card mt-1">
+    <div class="card-header text-secondary">
+      <div class="font-weight-bold"><%= skill.name %></div>
+    </div>
+    <div class="card-body text-secondary d-font">
+      <div>
+        <div class="card-text"><%= raw skill.content %></div>
+      </div>
+    </div>
+  </div>
+  <% end %> 
+</div>

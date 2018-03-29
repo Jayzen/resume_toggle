@@ -1,0 +1,19 @@
+<div id="contact" class="collapse">
+  <div class="card card-body bg-danger text-white py-5">
+    <h2>个人作品</h2>
+    <p>主要是基于Rails的Web项目</p>
+  </div>
+
+  <% @productions.each do |pd| %>
+  <div class="card mt-1">
+    <div class="card-header text-secondary">
+      <div class="font-weight-bold"><%= pd.name %></div>
+    </div>
+    <div class="card-body text-secondary d-font">
+      <div>
+        <div class="card-text"><%= raw pd.content %></div>
+      </div>
+    </div>
+  </div>
+  <% end %> 
+</div>

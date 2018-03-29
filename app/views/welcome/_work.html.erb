@@ -1,0 +1,19 @@
+<div id="work" class="collapse">
+  <div class="card card-body bg-warning text-white py-5">
+    <h2>工作经历</h2>
+    <p>读研期间主要在浙江大学计算机集成制造实验室从事软件研发工作，毕业之后在浙江能源从事项目管理工作</p>
+  </div>
+
+  <% @works.each do |wk| %>
+  <div class="card mt-1">
+    <div class="card-header text-secondary">
+      <div class="font-weight-bold"><%= wk.name %></div>
+    </div>
+    <div class="card-body text-secondary d-font">
+      <div>
+        <div class="card-text"><%=raw wk.content %></div>
+      </div>
+    </div>
+  </div>
+  <% end %>
+</div>
